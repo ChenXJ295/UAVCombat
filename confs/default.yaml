@@ -1,0 +1,70 @@
+env_args:
+    env_name: None
+    algorithm_name: None
+    scenario_name: None
+    experiment_name: v1
+    seed: 1
+train_args:
+    n_training_threads: 1
+    n_rollout_threads: 1
+    cuda: True
+    log_interval: 1
+    save_interval: 1
+    num_mini_batch: 5
+    buffer_size: 3000
+    num_env_steps: 10000000
+    lr: 0.0003
+    gamma: 0.99
+    ppo_epoch: 4
+    clip_params: 0.2
+    max_grad_norm: 2
+    entropy_coef: 0.001
+    hidden_size: 128 128
+    act_hidden_size: 128 128
+    recurrent_hidden_size: 128
+    recurrent_hidden_layers: 1
+    data_chunk_length: 8
+    use_wandb: True
+    wandb_name: nashcombat
+    user_name: wx
+    use_eval: False
+    use_selfplay: False
+    activation_id: 1
+    eval_episodes: 32
+    eval_interval: 25
+    gae_lambda: 0.95
+    gain: 0.01
+    init_elo: 1000.0
+    model_dir:
+    n_choose_opponents: 1
+    n_eval_rollout_threads: 1
+    render_index: latest
+    render_opponent_index: latest
+    selfplay_algorithm: sp
+    use_clippse_selfplay: False
+    value_loss_coef: 1
+    use_feature_normalization: False
+    use_recurrent_policy: True
+    use_prior: False
+    clip_param: True
+    use_clipped_value_loss: True
+    use_max_grad_norm: True
+    use_proper_time_limits: False
+    use_gae: True
+    num_process: 1
+    render: False
+    test: False
+    exploit: False
+    load_model_idx: False
+    load_model_full_path: False
+    multiprocess: False  # separate processes for sampling and update
+    eval_models: False   # evalutation models during training (only for specific methods)
+    save_path: ''       # path to save models and logs
+    wandb_activate: False # wandb for logging
+    wandb_entity: ''
+    wandb_project: ''
+    wandb_group: ''
+    ram: True
+    marl_spec:
+        global_state: false
+

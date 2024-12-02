@@ -1,0 +1,30 @@
+env_args:
+    env_name: SingleControl
+    algorithm_name: ppo
+    scenario_name: 1/heading
+    experiment_name: v1
+    seed: 5
+train_args:
+    n_training_threads: 1
+    n_rollout_threads: 1
+    cuda: True
+    log_interval: 1
+    save_interval: 1
+    num_mini_batch: 5
+    buffer_size: 3000
+    num_env_steps: 100000000
+    lr: 0.0003
+    gamma: 0.99
+    ppo_epoch: 4
+    clip_params: 0.2
+    max_grad_norm: 2
+    entropy_coef: 0.001
+    hidden_size: 128 128
+    act_hidden_size: 128 128
+    recurrent_hidden_size: 128
+    recurrent_hidden_layers: 1
+    data_chunk_length: 8
+    use_wandb: False
+    wandb_name: nashcombat
+#    use_wandb: True
+#    wandb_name: nashcombat
